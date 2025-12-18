@@ -17,5 +17,5 @@ dependencies:
   - pytest       # Testing
   - flake8       # Linting
   - pip:
-    - pytorch-cpu
-    - nltk       # Text processing (optional; for spam features)
+    - nltk       # Text processing (optional; for spam features like tokenization)
+    # No PyTorch here—Conda handles it
