@@ -1,0 +1,21 @@
+name: base  # Matches your GitHub Actions workflow (--name base)
+channels:
+  - conda-forge  # Reliable channel for most packages
+  - defaults
+dependencies:
+  - python=3.10  # Your specified Python version
+  - pip          # For pip-installable packages
+  - pandas       # Data handling
+  - numpy        # Numerical computing
+  - joblib       # Model saving/loading
+  - streamlit    # Web app framework
+  - scikit-learn # ML: train_test_split, TfidfVectorizer, LogisticRegression
+  - imaplib      # Built-in, but ensures email support
+  - email        # Built-in
+  - stable-baselines3  # RL: DQN
+  - gymnasium    # RL: Gym env
+  - torch        # Required by stable-baselines3
+  - pytest       # Testing
+  - flake8       # Linting
+  - pip:
+    - nltk       # Text processing (if needed for spam; install via pip if Conda version issues)
