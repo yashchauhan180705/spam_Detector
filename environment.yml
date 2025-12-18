@@ -1,6 +1,7 @@
 name: base  # Matches your GitHub Actions workflow (--name base)
 channels:
-  - conda-forge  # Reliable channel for most packages
+  - conda-forge  # Reliable for most packages
+  - pytorch      # Required for torch/stable-baselines3
   - defaults
 dependencies:
   - python=3.10  # Your specified Python version
@@ -10,10 +11,10 @@ dependencies:
   - joblib       # Model saving/loading
   - streamlit    # Web app framework
   - scikit-learn # ML: train_test_split, TfidfVectorizer, LogisticRegression
-  - stable-baselines3  # RL: DQN
+  - stable-baselines3  # RL: DQN (depends on torch)
   - gymnasium    # RL: Gym env
-  - torch        # Required by stable-baselines3
+  - torch        # PyTorch core (now resolvable via pytorch channel)
   - pytest       # Testing
   - flake8       # Linting
   - pip:
-    - nltk       # Text processing (optional; for spam features like tokenization)
+    - nltk       # Text processing (optional; for spam features)
